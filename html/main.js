@@ -5,6 +5,10 @@ var config = require("./require_config");
 
 requirejs.config(config);
 
-requirejs([], function() {
+requirejs([
+	"express"
+], function(
+	express
+) {
 	console.log("main.js initialized successfully!");
 });
