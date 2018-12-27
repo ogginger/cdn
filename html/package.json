@@ -1,0 +1,19 @@
+{
+  "name": "len",
+  "version": "1.0.0",
+  "description": "Linux, Express, Node; LAMP alternative.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ogginger/len"
+  },
+  "author": "og.ginger@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "requirejs": "^2.3.6"
+  }
+}
