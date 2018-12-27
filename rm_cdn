@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker stop len
-docker rm len
+docker stop cdn
+docker rm cdn

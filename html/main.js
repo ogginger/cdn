@@ -11,4 +11,9 @@ requirejs([
 	express
 ) {
 	console.log("main.js initialized successfully!");
+	var app = express();
+
+	app.get("/", function( request, response ) {
+		response.send("Success!");
+	});
 });
