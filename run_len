@@ -1,3 +1,0 @@
-#!/bin/bash
-
-run "--name len -v /home/josh/len/html/:/home/ -it -p 80:80" len
