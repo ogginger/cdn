@@ -3,10 +3,27 @@
 module.exports = {
         nodeRequire: require,
         baseUrl: ".",
-        paths: {},
+        paths: {
+		"rsvp": "lib/rsvp.min",
+		"file": "lib/file.min",
+		"promise": "lib/promise.min"
+	},
         bundles: {},
 	suppress: {
 		nodeShim: true
 	},
-	shim: {}
+	shim: {
+		"file": {
+			deps: [
+				"rsvp"
+			],
+			"exports": "file"
+		},
+		"promise": {
+			deps: [
+				"rsvp"
+			],
+			"exports": "promise"
+		}
+	}
 };
