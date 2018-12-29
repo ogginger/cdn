@@ -16,7 +16,7 @@ requirejs([
 	var app = express();
 
 	//Send the file requested.
-	app.get("/:file", function( request, response ) {
+	app.get("/cdn/:file", function( request, response ) {
 		file.get(request.params.file).then(function( File ) {
 			response.send(File);
 		});
