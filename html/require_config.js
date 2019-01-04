@@ -6,7 +6,11 @@ module.exports = {
         paths: {
 		"rsvp": "lib/rsvp.min",
 		"file": "lib/file.min",
-		"promise": "lib/promise.min"
+		"promise": "lib/promise.min",
+		"Snip": "lib/snip.min",
+		"backbone": "lib/backbone.min",
+		"underscore": "lib/underscore.min",
+		"log": "lib/log.min"
 	},
         bundles: {},
 	suppress: {
