@@ -16,7 +16,7 @@ requirejs([
 	var app = express();
 
 	var xSnip = new Snip({
-		"Dir": __dirname + "/lib/",
+		"Dir": "/home/josh/cdn/cdn/",
 		"Snippets": {
 			"TestSuite": "testsuite.min.js"
 		}
