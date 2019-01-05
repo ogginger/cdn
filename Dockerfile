@@ -6,7 +6,9 @@ run curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 run apt-get install -y nodejs
 
-volume /home
+add html/ /home/
+
+volume /home/cdn/
 
 workdir /home/
 

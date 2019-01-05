@@ -16,20 +16,21 @@ requirejs([
 	var app = express();
 
 	var xSnip = new Snip({
-		"Dir": "/home/josh/cdn/cdn/",
+		"Dir": "/home/cdn/",
 		"Snippets": {
-			"TestSuite": "testsuite.min.js"
+			//[Name]:[FileName]
 		}
 	});
 
 	//Send the file requested.
 	app.get("/cdn/:file", function( request, response ) {
+		console.log("Recieved request for '" + request.params.file + "'." );
 		xSnip.snip( request.params.file ).then(function( Body ) {
 			response.send( Body );
 		});
 	});
 
 	app.listen( 80, function() {
-		console.log("Listening on port 80...");
+		console.log("CDN started. Listening on port 80.");
 	});
 });
