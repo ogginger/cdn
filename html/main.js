@@ -7,25 +7,26 @@ requirejs.config(config);
 
 requirejs([
 	"express",
-	"Snip"
+	"Snip",
+	"Index"
 ], function(
 	express,
-	Snip
+	Snip,
+	Index
 ) {
 	console.log("main.js initialized successfully!");
 	var app = express();
 
 	var xSnip = new Snip({
 		"Dir": "/home/cdn/",
-		"Snippets": {
-			//[Name]:[FileName]
-		}
+		"Snippets": Index
 	});
 
 	//Send the file requested.
 	app.get("/cdn/:file", function( request, response ) {
 		console.log("Recieved request for '" + request.params.file + "'." );
 		xSnip.snip( request.params.file ).then(function( Body ) {
+			response.set( "Content-Type", "text/javascript" );
 			response.send( Body );
 		});
 	});

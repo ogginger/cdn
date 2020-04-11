@@ -10,7 +10,8 @@ module.exports = {
 		"Snip": "lib/snip.min",
 		"backbone": "lib/backbone.min",
 		"underscore": "lib/underscore.min",
-		"log": "lib/log.min"
+		"log": "lib/log.min",
+		"Index": "/home/cdn/Index"
 	},
         bundles: {},
 	suppress: {
